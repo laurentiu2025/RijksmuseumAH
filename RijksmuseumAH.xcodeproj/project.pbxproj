@@ -46,6 +46,16 @@
 		0911CB642E7AC35F007AC615 /* ImageDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB632E7AC35F007AC615 /* ImageDownloading.swift */; };
 		0911CB662E7AC368007AC615 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB652E7AC368007AC615 /* ImageDownloader.swift */; };
 		0911CB682E7AC381007AC615 /* ImageDownloaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB672E7AC381007AC615 /* ImageDownloaderFactory.swift */; };
+		0911CB6C2E7ACD52007AC615 /* IIIFImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB6B2E7ACD52007AC615 /* IIIFImageInfo.swift */; };
+		0911CB6E2E7ACD5D007AC615 /* IIIFImageRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB6D2E7ACD5D007AC615 /* IIIFImageRegion.swift */; };
+		0911CB702E7ACD66007AC615 /* IIIFImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB6F2E7ACD66007AC615 /* IIIFImageSize.swift */; };
+		0911CB722E7ACD6F007AC615 /* IIIFImageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB712E7ACD6F007AC615 /* IIIFImageFormat.swift */; };
+		0911CB742E7ACD76007AC615 /* IIIFImageQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB732E7ACD76007AC615 /* IIIFImageQuality.swift */; };
+		0911CB762E7ACD80007AC615 /* IIIFImageDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB752E7ACD80007AC615 /* IIIFImageDownloading.swift */; };
+		0911CB782E7ACD8A007AC615 /* IIIFImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB772E7ACD8A007AC615 /* IIIFImageDownloader.swift */; };
+		0911CB7A2E7ACD95007AC615 /* IIIFImageDownloaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB792E7ACD95007AC615 /* IIIFImageDownloaderFactory.swift */; };
+		0911CB7D2E7ACE4B007AC615 /* IIIFImageURLBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB7C2E7ACE4B007AC615 /* IIIFImageURLBuilding.swift */; };
+		0911CB812E7ACE6F007AC615 /* IIIFImageURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB802E7ACE6F007AC615 /* IIIFImageURLBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +118,16 @@
 		0911CB632E7AC35F007AC615 /* ImageDownloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloading.swift; sourceTree = "<group>"; };
 		0911CB652E7AC368007AC615 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		0911CB672E7AC381007AC615 /* ImageDownloaderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderFactory.swift; sourceTree = "<group>"; };
+		0911CB6B2E7ACD52007AC615 /* IIIFImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageInfo.swift; sourceTree = "<group>"; };
+		0911CB6D2E7ACD5D007AC615 /* IIIFImageRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageRegion.swift; sourceTree = "<group>"; };
+		0911CB6F2E7ACD66007AC615 /* IIIFImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageSize.swift; sourceTree = "<group>"; };
+		0911CB712E7ACD6F007AC615 /* IIIFImageFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageFormat.swift; sourceTree = "<group>"; };
+		0911CB732E7ACD76007AC615 /* IIIFImageQuality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageQuality.swift; sourceTree = "<group>"; };
+		0911CB752E7ACD80007AC615 /* IIIFImageDownloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageDownloading.swift; sourceTree = "<group>"; };
+		0911CB772E7ACD8A007AC615 /* IIIFImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageDownloader.swift; sourceTree = "<group>"; };
+		0911CB792E7ACD95007AC615 /* IIIFImageDownloaderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageDownloaderFactory.swift; sourceTree = "<group>"; };
+		0911CB7C2E7ACE4B007AC615 /* IIIFImageURLBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageURLBuilding.swift; sourceTree = "<group>"; };
+		0911CB802E7ACE6F007AC615 /* IIIFImageURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageURLBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +223,7 @@
 		0911CB102E7AA626007AC615 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0911CB692E7ACD39007AC615 /* IIIFImageDownloader */,
 				0911CB622E7AC352007AC615 /* ImageDownloader */,
 				0911CB542E7ABB42007AC615 /* ArtworkDigitalItemService */,
 				0911CB382E7AB115007AC615 /* ArtworkShowDetailsService */,
@@ -317,6 +338,39 @@
 				0911CB672E7AC381007AC615 /* ImageDownloaderFactory.swift */,
 			);
 			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
+		0911CB692E7ACD39007AC615 /* IIIFImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				0911CB752E7ACD80007AC615 /* IIIFImageDownloading.swift */,
+				0911CB772E7ACD8A007AC615 /* IIIFImageDownloader.swift */,
+				0911CB792E7ACD95007AC615 /* IIIFImageDownloaderFactory.swift */,
+				0911CB6A2E7ACD44007AC615 /* Entities */,
+				0911CB7B2E7ACE28007AC615 /* Builder */,
+			);
+			path = IIIFImageDownloader;
+			sourceTree = "<group>";
+		};
+		0911CB6A2E7ACD44007AC615 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0911CB6B2E7ACD52007AC615 /* IIIFImageInfo.swift */,
+				0911CB6D2E7ACD5D007AC615 /* IIIFImageRegion.swift */,
+				0911CB6F2E7ACD66007AC615 /* IIIFImageSize.swift */,
+				0911CB732E7ACD76007AC615 /* IIIFImageQuality.swift */,
+				0911CB712E7ACD6F007AC615 /* IIIFImageFormat.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		0911CB7B2E7ACE28007AC615 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				0911CB7C2E7ACE4B007AC615 /* IIIFImageURLBuilding.swift */,
+				0911CB802E7ACE6F007AC615 /* IIIFImageURLBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,30 +510,40 @@
 				0911CB332E7AAF4F007AC615 /* ArtworkDetailsServicing.swift in Sources */,
 				0911CAE62E7AA40A007AC615 /* RijksmuseumAHApp.swift in Sources */,
 				0911CB3F2E7AB156007AC615 /* ArtworkDigitalItemIdentifierType.swift in Sources */,
+				0911CB762E7ACD80007AC615 /* IIIFImageDownloading.swift in Sources */,
 				0911CB162E7AA72E007AC615 /* ArtworkCollectionServicing.swift in Sources */,
 				0911CB592E7ABB70007AC615 /* ArtworkDigitalItemAccessPoint.swift in Sources */,
 				0911CB2B2E7AAD94007AC615 /* ArtworkIdentifier.swift in Sources */,
+				0911CB742E7ACD76007AC615 /* IIIFImageQuality.swift in Sources */,
 				0911CB232E7AA8EF007AC615 /* ArtworkCollectionService.swift in Sources */,
 				0911CB642E7AC35F007AC615 /* ImageDownloading.swift in Sources */,
+				0911CB6E2E7ACD5D007AC615 /* IIIFImageRegion.swift in Sources */,
+				0911CB6C2E7ACD52007AC615 /* IIIFImageInfo.swift in Sources */,
 				0911CB212E7AA82A007AC615 /* ArtworkItemType.swift in Sources */,
 				0911CB132E7AA64C007AC615 /* FailableDecodable.swift in Sources */,
 				0911CB5B2E7ABB81007AC615 /* ArtworkDigitalItemAccessPointType.swift in Sources */,
 				0911CB292E7AAD7B007AC615 /* ArtworkDetails.swift in Sources */,
+				0911CB7A2E7ACD95007AC615 /* IIIFImageDownloaderFactory.swift in Sources */,
 				0911CB2D2E7AADA5007AC615 /* ArtworkIdentifierType.swift in Sources */,
+				0911CB702E7ACD66007AC615 /* IIIFImageSize.swift in Sources */,
 				0911CB572E7ABB61007AC615 /* ArtworkDigitalItem.swift in Sources */,
 				0911CB452E7AB38D007AC615 /* ArtworkShowDetailsServiceFactory.swift in Sources */,
 				0911CB372E7AAF71007AC615 /* ArtworkDetailsServiceFactory.swift in Sources */,
+				0911CB812E7ACE6F007AC615 /* IIIFImageURLBuilder.swift in Sources */,
 				0911CB2F2E7AADB6007AC615 /* ArtworkShow.swift in Sources */,
 				0911CB1F2E7AA801007AC615 /* ArtworkItem.swift in Sources */,
 				0911CB432E7AB379007AC615 /* ArtworkShowDetailsService.swift in Sources */,
 				0911CB5D2E7ABBAA007AC615 /* ArtworkDigitalItemServicing.swift in Sources */,
 				0911CB3D2E7AB144007AC615 /* ArtworkDigitalItemIdentifier.swift in Sources */,
 				0911CB612E7ABBD4007AC615 /* ArtworkDigitalItemServiceFactory.swift in Sources */,
+				0911CB7D2E7ACE4B007AC615 /* IIIFImageURLBuilding.swift in Sources */,
+				0911CB722E7ACD6F007AC615 /* IIIFImageFormat.swift in Sources */,
 				0911CB192E7AA751007AC615 /* ArtworkCollection.swift in Sources */,
 				0911CB412E7AB361007AC615 /* ArtworkShowDetailsServicing.swift in Sources */,
 				0911CB312E7AADC4007AC615 /* ArtworkShowType.swift in Sources */,
 				0911CB662E7AC368007AC615 /* ImageDownloader.swift in Sources */,
 				0911CB252E7AAA5B007AC615 /* ArtworkCollectionServiceFactory.swift in Sources */,
+				0911CB782E7ACD8A007AC615 /* IIIFImageDownloader.swift in Sources */,
 				0911CB1B2E7AA76B007AC615 /* ArtworkNextCollection.swift in Sources */,
 				0911CB352E7AAF5F007AC615 /* ArtworkDetailsService.swift in Sources */,
 				0911CB3B2E7AB133007AC615 /* ArtworkShowDetails.swift in Sources */,
