@@ -1,5 +1,5 @@
 //
-//  ArtworkVisualItemService.swift
+//  ArtworkShowDetailsService.swift
 //  RijksmuseumAH
 //
 //  Created by Laurentiu Cociu on 9/17/25.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ArtworkVisualItemService: ArtworkVisualItemServicing {
+final class ArtworkShowDetailsService: ArtworkShowDetailsServicing {
     private let session: URLSession
     private let decoder: JSONDecoder
     
@@ -16,11 +16,11 @@ final class ArtworkVisualItemService: ArtworkVisualItemServicing {
         self.decoder = decoder
     }
     
-    // MARK: - ArtworkVisualItemServicing
+    // MARK: - ArtworkShowDetailsServicing
     
-    func fetchVisualItem(id: URL) async throws -> ArtworkVisualItem {
+    func fetchShowDetails(id: URL) async throws -> ArtworkShowDetails {
         let request = URLRequest(url: id)
         let (data, _) = try await session.data(for: request)
-        return try decoder.decode(ArtworkVisualItem.self, from: data)
+        return try decoder.decode(ArtworkShowDetails.self, from: data)
     }
 }
