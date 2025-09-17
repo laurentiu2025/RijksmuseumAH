@@ -43,6 +43,9 @@
 		0911CB5D2E7ABBAA007AC615 /* ArtworkDigitalItemServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB5C2E7ABBAA007AC615 /* ArtworkDigitalItemServicing.swift */; };
 		0911CB5F2E7ABBBD007AC615 /* ArtworkDigitalItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB5E2E7ABBBD007AC615 /* ArtworkDigitalItemService.swift */; };
 		0911CB612E7ABBD4007AC615 /* ArtworkDigitalItemServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB602E7ABBD4007AC615 /* ArtworkDigitalItemServiceFactory.swift */; };
+		0911CB642E7AC35F007AC615 /* ImageDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB632E7AC35F007AC615 /* ImageDownloading.swift */; };
+		0911CB662E7AC368007AC615 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB652E7AC368007AC615 /* ImageDownloader.swift */; };
+		0911CB682E7AC381007AC615 /* ImageDownloaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB672E7AC381007AC615 /* ImageDownloaderFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +105,9 @@
 		0911CB5C2E7ABBAA007AC615 /* ArtworkDigitalItemServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkDigitalItemServicing.swift; sourceTree = "<group>"; };
 		0911CB5E2E7ABBBD007AC615 /* ArtworkDigitalItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkDigitalItemService.swift; sourceTree = "<group>"; };
 		0911CB602E7ABBD4007AC615 /* ArtworkDigitalItemServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkDigitalItemServiceFactory.swift; sourceTree = "<group>"; };
+		0911CB632E7AC35F007AC615 /* ImageDownloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloading.swift; sourceTree = "<group>"; };
+		0911CB652E7AC368007AC615 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		0911CB672E7AC381007AC615 /* ImageDownloaderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +203,7 @@
 		0911CB102E7AA626007AC615 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0911CB622E7AC352007AC615 /* ImageDownloader */,
 				0911CB542E7ABB42007AC615 /* ArtworkDigitalItemService */,
 				0911CB382E7AB115007AC615 /* ArtworkShowDetailsService */,
 				0911CB262E7AAD4F007AC615 /* ArtworkDetailsService */,
@@ -300,6 +307,16 @@
 				0911CB5A2E7ABB81007AC615 /* ArtworkDigitalItemAccessPointType.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		0911CB622E7AC352007AC615 /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				0911CB632E7AC35F007AC615 /* ImageDownloading.swift */,
+				0911CB652E7AC368007AC615 /* ImageDownloader.swift */,
+				0911CB672E7AC381007AC615 /* ImageDownloaderFactory.swift */,
+			);
+			path = ImageDownloader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0911CB5F2E7ABBBD007AC615 /* ArtworkDigitalItemService.swift in Sources */,
+				0911CB682E7AC381007AC615 /* ImageDownloaderFactory.swift in Sources */,
 				0911CB1D2E7AA782007AC615 /* ArtworkNextCollectionType.swift in Sources */,
 				0911CAE82E7AA40A007AC615 /* ContentView.swift in Sources */,
 				0911CB332E7AAF4F007AC615 /* ArtworkDetailsServicing.swift in Sources */,
@@ -442,6 +460,7 @@
 				0911CB592E7ABB70007AC615 /* ArtworkDigitalItemAccessPoint.swift in Sources */,
 				0911CB2B2E7AAD94007AC615 /* ArtworkIdentifier.swift in Sources */,
 				0911CB232E7AA8EF007AC615 /* ArtworkCollectionService.swift in Sources */,
+				0911CB642E7AC35F007AC615 /* ImageDownloading.swift in Sources */,
 				0911CB212E7AA82A007AC615 /* ArtworkItemType.swift in Sources */,
 				0911CB132E7AA64C007AC615 /* FailableDecodable.swift in Sources */,
 				0911CB5B2E7ABB81007AC615 /* ArtworkDigitalItemAccessPointType.swift in Sources */,
@@ -459,6 +478,7 @@
 				0911CB192E7AA751007AC615 /* ArtworkCollection.swift in Sources */,
 				0911CB412E7AB361007AC615 /* ArtworkShowDetailsServicing.swift in Sources */,
 				0911CB312E7AADC4007AC615 /* ArtworkShowType.swift in Sources */,
+				0911CB662E7AC368007AC615 /* ImageDownloader.swift in Sources */,
 				0911CB252E7AAA5B007AC615 /* ArtworkCollectionServiceFactory.swift in Sources */,
 				0911CB1B2E7AA76B007AC615 /* ArtworkNextCollection.swift in Sources */,
 				0911CB352E7AAF5F007AC615 /* ArtworkDetailsService.swift in Sources */,
