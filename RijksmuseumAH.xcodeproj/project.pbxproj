@@ -14,6 +14,7 @@
 		0911CAF72E7AA40C007AC615 /* RijksmuseumAHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CAF62E7AA40C007AC615 /* RijksmuseumAHTests.swift */; };
 		0911CB012E7AA40C007AC615 /* RijksmuseumAHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB002E7AA40C007AC615 /* RijksmuseumAHUITests.swift */; };
 		0911CB032E7AA40C007AC615 /* RijksmuseumAHUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB022E7AA40C007AC615 /* RijksmuseumAHUITestsLaunchTests.swift */; };
+		0911CB132E7AA64C007AC615 /* FailableDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB122E7AA64C007AC615 /* FailableDecodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		0911CAFC2E7AA40C007AC615 /* RijksmuseumAHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RijksmuseumAHUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0911CB002E7AA40C007AC615 /* RijksmuseumAHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksmuseumAHUITests.swift; sourceTree = "<group>"; };
 		0911CB022E7AA40C007AC615 /* RijksmuseumAHUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksmuseumAHUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0911CB122E7AA64C007AC615 /* FailableDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDecodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		0911CAD92E7AA40A007AC615 = {
 			isa = PBXGroup;
 			children = (
+				0911CB0F2E7AA620007AC615 /* Sources */,
 				0911CAE42E7AA40A007AC615 /* RijksmuseumAH */,
 				0911CAF52E7AA40C007AC615 /* RijksmuseumAHTests */,
 				0911CAFF2E7AA40C007AC615 /* RijksmuseumAHUITests */,
@@ -125,6 +128,30 @@
 				0911CB022E7AA40C007AC615 /* RijksmuseumAHUITestsLaunchTests.swift */,
 			);
 			path = RijksmuseumAHUITests;
+			sourceTree = "<group>";
+		};
+		0911CB0F2E7AA620007AC615 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0911CB102E7AA626007AC615 /* Services */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0911CB102E7AA626007AC615 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0911CB112E7AA639007AC615 /* Common */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0911CB112E7AA639007AC615 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0911CB122E7AA64C007AC615 /* FailableDecodable.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +286,7 @@
 			files = (
 				0911CAE82E7AA40A007AC615 /* ContentView.swift in Sources */,
 				0911CAE62E7AA40A007AC615 /* RijksmuseumAHApp.swift in Sources */,
+				0911CB132E7AA64C007AC615 /* FailableDecodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
