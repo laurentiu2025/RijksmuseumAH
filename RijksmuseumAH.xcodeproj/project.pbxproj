@@ -58,6 +58,9 @@
 		0911CBBF2E7AD4A1007AC615 /* NetworkServiceURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CBBB2E7AD4A1007AC615 /* NetworkServiceURLProtocol.swift */; };
 		0911CBC02E7AD4A1007AC615 /* NetworkServiceTargetURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CBBD2E7AD4A1007AC615 /* NetworkServiceTargetURL.swift */; };
 		0911CBC12E7AD4A1007AC615 /* NetworkServiceTargetURLBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CBBE2E7AD4A1007AC615 /* NetworkServiceTargetURLBehaviour.swift */; };
+		0911CBC62E7AD896007AC615 /* ArtworkDetailsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CBC52E7AD896007AC615 /* ArtworkDetailsServiceTests.swift */; };
+		0911CBC82E7AD8A8007AC615 /* ArtworkCollectionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CBC72E7AD8A8007AC615 /* ArtworkCollectionServiceTests.swift */; };
+		0911CBCA2E7AD8CC007AC615 /* DefaultIIIFImageURLBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CBC92E7AD8CC007AC615 /* DefaultIIIFImageURLBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +135,9 @@
 		0911CBBB2E7AD4A1007AC615 /* NetworkServiceURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceURLProtocol.swift; sourceTree = "<group>"; };
 		0911CBBD2E7AD4A1007AC615 /* NetworkServiceTargetURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceTargetURL.swift; sourceTree = "<group>"; };
 		0911CBBE2E7AD4A1007AC615 /* NetworkServiceTargetURLBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceTargetURLBehaviour.swift; sourceTree = "<group>"; };
+		0911CBC52E7AD896007AC615 /* ArtworkDetailsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkDetailsServiceTests.swift; sourceTree = "<group>"; };
+		0911CBC72E7AD8A8007AC615 /* ArtworkCollectionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCollectionServiceTests.swift; sourceTree = "<group>"; };
+		0911CBC92E7AD8CC007AC615 /* DefaultIIIFImageURLBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultIIIFImageURLBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +208,7 @@
 		0911CAF52E7AA40C007AC615 /* RijksmuseumAHTests */ = {
 			isa = PBXGroup;
 			children = (
+				0911CBC42E7AD88D007AC615 /* Services */,
 				0911CBB92E7AD4A1007AC615 /* Common */,
 			);
 			path = RijksmuseumAHTests;
@@ -403,6 +410,16 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		0911CBC42E7AD88D007AC615 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0911CBC72E7AD8A8007AC615 /* ArtworkCollectionServiceTests.swift */,
+				0911CBC52E7AD896007AC615 /* ArtworkDetailsServiceTests.swift */,
+				0911CBC92E7AD8CC007AC615 /* DefaultIIIFImageURLBuilderTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -584,9 +601,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0911CBCA2E7AD8CC007AC615 /* DefaultIIIFImageURLBuilderTests.swift in Sources */,
 				0911CBC02E7AD4A1007AC615 /* NetworkServiceTargetURL.swift in Sources */,
 				0911CBBF2E7AD4A1007AC615 /* NetworkServiceURLProtocol.swift in Sources */,
+				0911CBC62E7AD896007AC615 /* ArtworkDetailsServiceTests.swift in Sources */,
 				0911CBC12E7AD4A1007AC615 /* NetworkServiceTargetURLBehaviour.swift in Sources */,
+				0911CBC82E7AD8A8007AC615 /* ArtworkCollectionServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
