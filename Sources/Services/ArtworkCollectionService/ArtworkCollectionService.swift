@@ -28,8 +28,8 @@ final class ArtworkCollectionService: ArtworkCollectionServicing {
         return try decoder.decode(ArtworkCollection.self, from: data)
     }
     
-    func fetchNextArtworkCollection(collectionURL: URL) async throws -> ArtworkCollection {
-        let request = URLRequest(url: collectionURL)
+    func fetchNextArtworkCollection(id: URL) async throws -> ArtworkCollection {
+        let request = URLRequest(url: id)
         let (data, _) = try await session.data(for: request)
         return try decoder.decode(ArtworkCollection.self, from: data)
     }

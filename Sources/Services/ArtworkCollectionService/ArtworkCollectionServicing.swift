@@ -9,5 +9,5 @@ import Foundation
 
 protocol ArtworkCollectionServicing {
     func fetchArtworkCollection() async throws -> ArtworkCollection
-    func fetchNextArtworkCollection(collectionURL: URL) async throws -> ArtworkCollection
+    func fetchNextArtworkCollection(id: URL) async throws -> ArtworkCollection
 }
