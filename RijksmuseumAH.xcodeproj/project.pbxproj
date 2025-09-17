@@ -56,6 +56,9 @@
 		0911CB7A2E7ACD95007AC615 /* IIIFImageDownloaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB792E7ACD95007AC615 /* IIIFImageDownloaderFactory.swift */; };
 		0911CB7D2E7ACE4B007AC615 /* IIIFImageURLBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB7C2E7ACE4B007AC615 /* IIIFImageURLBuilding.swift */; };
 		0911CB812E7ACE6F007AC615 /* IIIFImageURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CB802E7ACE6F007AC615 /* IIIFImageURLBuilder.swift */; };
+		0911CBBF2E7AD4A1007AC615 /* NetworkServiceURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CBBB2E7AD4A1007AC615 /* NetworkServiceURLProtocol.swift */; };
+		0911CBC02E7AD4A1007AC615 /* NetworkServiceTargetURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CBBD2E7AD4A1007AC615 /* NetworkServiceTargetURL.swift */; };
+		0911CBC12E7AD4A1007AC615 /* NetworkServiceTargetURLBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CBBE2E7AD4A1007AC615 /* NetworkServiceTargetURLBehaviour.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +131,9 @@
 		0911CB792E7ACD95007AC615 /* IIIFImageDownloaderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageDownloaderFactory.swift; sourceTree = "<group>"; };
 		0911CB7C2E7ACE4B007AC615 /* IIIFImageURLBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageURLBuilding.swift; sourceTree = "<group>"; };
 		0911CB802E7ACE6F007AC615 /* IIIFImageURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIIFImageURLBuilder.swift; sourceTree = "<group>"; };
+		0911CBBB2E7AD4A1007AC615 /* NetworkServiceURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceURLProtocol.swift; sourceTree = "<group>"; };
+		0911CBBD2E7AD4A1007AC615 /* NetworkServiceTargetURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceTargetURL.swift; sourceTree = "<group>"; };
+		0911CBBE2E7AD4A1007AC615 /* NetworkServiceTargetURLBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceTargetURLBehaviour.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,7 @@
 		0911CAF52E7AA40C007AC615 /* RijksmuseumAHTests */ = {
 			isa = PBXGroup;
 			children = (
+				0911CBB92E7AD4A1007AC615 /* Common */,
 				0911CAF62E7AA40C007AC615 /* RijksmuseumAHTests.swift */,
 			);
 			path = RijksmuseumAHTests;
@@ -371,6 +378,32 @@
 				0911CB802E7ACE6F007AC615 /* IIIFImageURLBuilder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		0911CBB92E7AD4A1007AC615 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0911CBBA2E7AD4A1007AC615 /* Network */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0911CBBA2E7AD4A1007AC615 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0911CBBB2E7AD4A1007AC615 /* NetworkServiceURLProtocol.swift */,
+				0911CBBC2E7AD4A1007AC615 /* Entities */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0911CBBC2E7AD4A1007AC615 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0911CBBD2E7AD4A1007AC615 /* NetworkServiceTargetURL.swift */,
+				0911CBBE2E7AD4A1007AC615 /* NetworkServiceTargetURLBehaviour.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,7 +587,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0911CBC02E7AD4A1007AC615 /* NetworkServiceTargetURL.swift in Sources */,
+				0911CBBF2E7AD4A1007AC615 /* NetworkServiceURLProtocol.swift in Sources */,
 				0911CAF72E7AA40C007AC615 /* RijksmuseumAHTests.swift in Sources */,
+				0911CBC12E7AD4A1007AC615 /* NetworkServiceTargetURLBehaviour.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
