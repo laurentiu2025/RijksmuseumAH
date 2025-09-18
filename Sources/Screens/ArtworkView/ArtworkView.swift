@@ -92,8 +92,9 @@ struct ArtworkView: View {
     @ViewBuilder
     private func errorView(message: String) -> some View {
         Text(message)
-            .font(.title)
+            .font(.headline)
             .foregroundStyle(.red)
+            .multilineTextAlignment(.center)
             .accessibilityIdentifier(ArtworkViewAccessibilityIdentifier.imageError.rawValue)
     }
 }
