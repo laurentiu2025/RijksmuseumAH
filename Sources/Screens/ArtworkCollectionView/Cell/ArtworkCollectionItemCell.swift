@@ -107,7 +107,6 @@ final class ArtworkCollectionItemCell: UICollectionViewCell {
     }
     
     private func setupTitleLabelLayout() {
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(titleLabel)
         
         NSLayoutConstraint.activate([
@@ -116,7 +115,6 @@ final class ArtworkCollectionItemCell: UICollectionViewCell {
     }
     
     private func setupArtworkImageViewLayout() {
-        artworkImageView.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(artworkImageView)
     }
     
