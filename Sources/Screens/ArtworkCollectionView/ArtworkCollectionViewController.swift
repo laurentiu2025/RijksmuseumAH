@@ -20,12 +20,14 @@ final class ArtworkCollectionViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         collectionView.isHidden = true
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        collectionView.accessibilityIdentifier = ArtworkCollectionViewAccessibilityIdentifier.collectionView.rawValue
         return collectionView
     }()
     
     private lazy var loadingIndicatorView =  {
         let indicatorView = UIActivityIndicatorView(style: .large)
         indicatorView.isHidden = true
+        indicatorView.accessibilityIdentifier = ArtworkCollectionViewAccessibilityIdentifier.loadingIndicator.rawValue
         return indicatorView
     }()
     
@@ -50,6 +52,7 @@ final class ArtworkCollectionViewController: UIViewController {
             viewModel.fetchArtworkItems()
         }
         
+        view.accessibilityIdentifier = ArtworkCollectionViewAccessibilityIdentifier.errorView.rawValue
         return view
     }()
     

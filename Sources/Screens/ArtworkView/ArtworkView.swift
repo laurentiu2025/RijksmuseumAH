@@ -33,6 +33,7 @@ struct ArtworkView: View {
             .multilineTextAlignment(.leading)
             .font(.title)
             .frame(maxWidth: .infinity, alignment: .leading)
+            .accessibilityIdentifier(ArtworkViewAccessibilityIdentifier.title.rawValue)
     }
     
     @ViewBuilder
@@ -66,6 +67,7 @@ struct ArtworkView: View {
     private func imageLoadingView() -> some View {
         ProgressView()
             .progressViewStyle(CircularProgressViewStyle())
+            .accessibilityIdentifier(ArtworkViewAccessibilityIdentifier.imageLoadingIndicator.rawValue)
     }
     
     @ViewBuilder
@@ -78,6 +80,7 @@ struct ArtworkView: View {
                     .scaledToFit()
                     .frame(width: size.width, height: size.height)
                     .cornerRadius(10)
+                    .accessibilityIdentifier(ArtworkViewAccessibilityIdentifier.image.rawValue)
             } else {
                 errorView(message: "Invalid image")
             }
@@ -91,6 +94,7 @@ struct ArtworkView: View {
         Text(message)
             .font(.title)
             .foregroundStyle(.red)
+            .accessibilityIdentifier(ArtworkViewAccessibilityIdentifier.imageError.rawValue)
     }
 }
 
