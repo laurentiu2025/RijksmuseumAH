@@ -74,6 +74,17 @@
 		0911CC1B2E7B2914007AC615 /* ArtworkCollectionItemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC132E7B2876007AC615 /* ArtworkCollectionItemCellModel.swift */; };
 		0911CC1E2E7B297D007AC615 /* ArtworkCollectionViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC1D2E7B297D007AC615 /* ArtworkCollectionViewState.swift */; };
 		0911CC1F2E7B29E2007AC615 /* ArtworkCollectionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC0F2E7B2818007AC615 /* ArtworkCollectionItemCell.swift */; };
+		0911CC382E7BEC01007AC615 /* ArtworkCollectionItemCellState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC372E7BEC01007AC615 /* ArtworkCollectionItemCellState.swift */; };
+		0911CC3A2E7BEC0C007AC615 /* ArtworkCollectionItemCellStateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC392E7BEC0C007AC615 /* ArtworkCollectionItemCellStateMapper.swift */; };
+		0911CC3D2E7BEC49007AC615 /* ArtworkItemDataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC3C2E7BEC49007AC615 /* ArtworkItemDataLoading.swift */; };
+		0911CC3F2E7BEC64007AC615 /* ArtworkItemDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC3E2E7BEC64007AC615 /* ArtworkItemDataLoader.swift */; };
+		0911CC412E7BEC77007AC615 /* ArtworkItemDataLoaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC402E7BEC77007AC615 /* ArtworkItemDataLoaderFactory.swift */; };
+		0911CC442E7BEC96007AC615 /* ArtworkItemDataLoaderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC432E7BEC96007AC615 /* ArtworkItemDataLoaderState.swift */; };
+		0911CC462E7BECA8007AC615 /* ArtworkViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC452E7BECA8007AC615 /* ArtworkViewData.swift */; };
+		0911CC482E7BECBA007AC615 /* ArtworkItemDataLoaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC472E7BECBA007AC615 /* ArtworkItemDataLoaderError.swift */; };
+		0911CC4C2E7BED1A007AC615 /* ArtworkImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC4B2E7BED1A007AC615 /* ArtworkImageLoading.swift */; };
+		0911CC4E2E7BED28007AC615 /* ArtworkImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC4D2E7BED28007AC615 /* ArtworkImageLoader.swift */; };
+		0911CC502E7BED35007AC615 /* ArtworkImageLoaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC4F2E7BED35007AC615 /* ArtworkImageLoaderFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +175,17 @@
 		0911CC152E7B287E007AC615 /* ArtworkCollectionItemCellModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCollectionItemCellModelFactory.swift; sourceTree = "<group>"; };
 		0911CC182E7B2909007AC615 /* ArtworkCollectionItemCellModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCollectionItemCellModeling.swift; sourceTree = "<group>"; };
 		0911CC1D2E7B297D007AC615 /* ArtworkCollectionViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCollectionViewState.swift; sourceTree = "<group>"; };
+		0911CC372E7BEC01007AC615 /* ArtworkCollectionItemCellState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCollectionItemCellState.swift; sourceTree = "<group>"; };
+		0911CC392E7BEC0C007AC615 /* ArtworkCollectionItemCellStateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCollectionItemCellStateMapper.swift; sourceTree = "<group>"; };
+		0911CC3C2E7BEC49007AC615 /* ArtworkItemDataLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkItemDataLoading.swift; sourceTree = "<group>"; };
+		0911CC3E2E7BEC64007AC615 /* ArtworkItemDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkItemDataLoader.swift; sourceTree = "<group>"; };
+		0911CC402E7BEC77007AC615 /* ArtworkItemDataLoaderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkItemDataLoaderFactory.swift; sourceTree = "<group>"; };
+		0911CC432E7BEC96007AC615 /* ArtworkItemDataLoaderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkItemDataLoaderState.swift; sourceTree = "<group>"; };
+		0911CC452E7BECA8007AC615 /* ArtworkViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViewData.swift; sourceTree = "<group>"; };
+		0911CC472E7BECBA007AC615 /* ArtworkItemDataLoaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkItemDataLoaderError.swift; sourceTree = "<group>"; };
+		0911CC4B2E7BED1A007AC615 /* ArtworkImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkImageLoading.swift; sourceTree = "<group>"; };
+		0911CC4D2E7BED28007AC615 /* ArtworkImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkImageLoader.swift; sourceTree = "<group>"; };
+		0911CC4F2E7BED35007AC615 /* ArtworkImageLoaderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkImageLoaderFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,6 +472,7 @@
 		0911CBED2E7B24F6007AC615 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0911CC492E7BECFA007AC615 /* Common */,
 				0911CBEE2E7B250E007AC615 /* ArtworkCollectionView */,
 			);
 			path = Screens;
@@ -492,6 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				0911CC0F2E7B2818007AC615 /* ArtworkCollectionItemCell.swift */,
+				0911CC362E7BEBDC007AC615 /* Entities */,
 				0911CC0E2E7B2733007AC615 /* ViewModel */,
 			);
 			path = Cell;
@@ -503,6 +527,7 @@
 				0911CC182E7B2909007AC615 /* ArtworkCollectionItemCellModeling.swift */,
 				0911CC132E7B2876007AC615 /* ArtworkCollectionItemCellModel.swift */,
 				0911CC152E7B287E007AC615 /* ArtworkCollectionItemCellModelFactory.swift */,
+				0911CC3B2E7BEC38007AC615 /* Loader */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -513,6 +538,54 @@
 				0911CC1D2E7B297D007AC615 /* ArtworkCollectionViewState.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		0911CC362E7BEBDC007AC615 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0911CC372E7BEC01007AC615 /* ArtworkCollectionItemCellState.swift */,
+				0911CC392E7BEC0C007AC615 /* ArtworkCollectionItemCellStateMapper.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		0911CC3B2E7BEC38007AC615 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				0911CC3C2E7BEC49007AC615 /* ArtworkItemDataLoading.swift */,
+				0911CC3E2E7BEC64007AC615 /* ArtworkItemDataLoader.swift */,
+				0911CC402E7BEC77007AC615 /* ArtworkItemDataLoaderFactory.swift */,
+				0911CC422E7BEC87007AC615 /* Entities */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		0911CC422E7BEC87007AC615 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0911CC432E7BEC96007AC615 /* ArtworkItemDataLoaderState.swift */,
+				0911CC452E7BECA8007AC615 /* ArtworkViewData.swift */,
+				0911CC472E7BECBA007AC615 /* ArtworkItemDataLoaderError.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		0911CC492E7BECFA007AC615 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0911CC4A2E7BED09007AC615 /* ImageLoader */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0911CC4A2E7BED09007AC615 /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				0911CC4B2E7BED1A007AC615 /* ArtworkImageLoading.swift */,
+				0911CC4D2E7BED28007AC615 /* ArtworkImageLoader.swift */,
+				0911CC4F2E7BED35007AC615 /* ArtworkImageLoaderFactory.swift */,
+			);
+			path = ImageLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -653,13 +726,17 @@
 				0911CB332E7AAF4F007AC615 /* ArtworkDetailsServicing.swift in Sources */,
 				0911CAE62E7AA40A007AC615 /* RijksmuseumAHApp.swift in Sources */,
 				0911CB3F2E7AB156007AC615 /* ArtworkDigitalItemIdentifierType.swift in Sources */,
+				0911CC3D2E7BEC49007AC615 /* ArtworkItemDataLoading.swift in Sources */,
 				0911CB762E7ACD80007AC615 /* IIIFImageDownloading.swift in Sources */,
 				0911CC1B2E7B2914007AC615 /* ArtworkCollectionItemCellModel.swift in Sources */,
 				0911CC1E2E7B297D007AC615 /* ArtworkCollectionViewState.swift in Sources */,
 				0911CB162E7AA72E007AC615 /* ArtworkCollectionServicing.swift in Sources */,
+				0911CC4C2E7BED1A007AC615 /* ArtworkImageLoading.swift in Sources */,
 				0911CB592E7ABB70007AC615 /* ArtworkDigitalItemAccessPoint.swift in Sources */,
 				0911CB2B2E7AAD94007AC615 /* ArtworkIdentifier.swift in Sources */,
 				0911CC052E7B26BF007AC615 /* ArtworkCollectionViewModel.swift in Sources */,
+				0911CC382E7BEC01007AC615 /* ArtworkCollectionItemCellState.swift in Sources */,
+				0911CC482E7BECBA007AC615 /* ArtworkItemDataLoaderError.swift in Sources */,
 				0911CB742E7ACD76007AC615 /* IIIFImageQuality.swift in Sources */,
 				0911CB232E7AA8EF007AC615 /* ArtworkCollectionService.swift in Sources */,
 				0911CB642E7AC35F007AC615 /* ImageDownloading.swift in Sources */,
@@ -671,6 +748,8 @@
 				0911CB292E7AAD7B007AC615 /* ArtworkDetails.swift in Sources */,
 				0911CB7A2E7ACD95007AC615 /* IIIFImageDownloaderFactory.swift in Sources */,
 				0911CB2D2E7AADA5007AC615 /* ArtworkIdentifierType.swift in Sources */,
+				0911CC442E7BEC96007AC615 /* ArtworkItemDataLoaderState.swift in Sources */,
+				0911CC3F2E7BEC64007AC615 /* ArtworkItemDataLoader.swift in Sources */,
 				0911CB702E7ACD66007AC615 /* IIIFImageSize.swift in Sources */,
 				0911CB572E7ABB61007AC615 /* ArtworkDigitalItem.swift in Sources */,
 				0911CC1A2E7B2912007AC615 /* ArtworkCollectionItemCellModelFactory.swift in Sources */,
@@ -679,13 +758,18 @@
 				0911CB372E7AAF71007AC615 /* ArtworkDetailsServiceFactory.swift in Sources */,
 				0911CB812E7ACE6F007AC615 /* IIIFImageURLBuilder.swift in Sources */,
 				0911CB2F2E7AADB6007AC615 /* ArtworkShow.swift in Sources */,
+				0911CC3A2E7BEC0C007AC615 /* ArtworkCollectionItemCellStateMapper.swift in Sources */,
 				0911CB1F2E7AA801007AC615 /* ArtworkItem.swift in Sources */,
 				0911CB432E7AB379007AC615 /* ArtworkShowDetailsService.swift in Sources */,
 				0911CB5D2E7ABBAA007AC615 /* ArtworkDigitalItemServicing.swift in Sources */,
 				0911CC032E7B26B9007AC615 /* ArtworkCollectionViewDataSource.swift in Sources */,
 				0911CC082E7B26C7007AC615 /* ArtworkCollectionViewControllerFactory.swift in Sources */,
+				0911CC502E7BED35007AC615 /* ArtworkImageLoaderFactory.swift in Sources */,
+				0911CC412E7BEC77007AC615 /* ArtworkItemDataLoaderFactory.swift in Sources */,
 				0911CB3D2E7AB144007AC615 /* ArtworkDigitalItemIdentifier.swift in Sources */,
+				0911CC4E2E7BED28007AC615 /* ArtworkImageLoader.swift in Sources */,
 				0911CB612E7ABBD4007AC615 /* ArtworkDigitalItemServiceFactory.swift in Sources */,
+				0911CC462E7BECA8007AC615 /* ArtworkViewData.swift in Sources */,
 				0911CB7D2E7ACE4B007AC615 /* IIIFImageURLBuilding.swift in Sources */,
 				0911CB722E7ACD6F007AC615 /* IIIFImageFormat.swift in Sources */,
 				0911CC072E7B26C5007AC615 /* ArtworkCollectionViewDelegate.swift in Sources */,

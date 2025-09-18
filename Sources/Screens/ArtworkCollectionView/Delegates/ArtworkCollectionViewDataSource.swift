@@ -19,7 +19,7 @@ class ArtworkCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let artworkCollectionItemCell = collectionView.dequeueReusableCell(withReuseIdentifier: ArtworkCollectionItemCell.identifier, for: indexPath) as! ArtworkCollectionItemCell
         let artworkItemViewModel = artworkItems[indexPath.item]
-        artworkCollectionItemCell.show(artworkId: artworkItemViewModel.artworkId)
+        artworkCollectionItemCell.show(state: artworkItemViewModel.state)
         return artworkCollectionItemCell
     }
 }

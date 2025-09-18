@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ArtworkCollectionViewWrapper: UIViewControllerRepresentable {
-    typealias ArtworkSelectionHandler = (_ artworkId: URL) -> Void
+    typealias ArtworkSelectionHandler = (ArtworkViewData) -> Void
     var onArtworkSelected: ArtworkSelectionHandler?
     
     // MARK: - UIViewControllerRepresentable

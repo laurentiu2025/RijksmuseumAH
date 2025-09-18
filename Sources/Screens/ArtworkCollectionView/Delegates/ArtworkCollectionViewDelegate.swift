@@ -23,7 +23,21 @@ class ArtworkCollectionViewDelegate: NSObject, UICollectionViewDelegate, UIScrol
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        // TODO: Add data loading
+        guard let artworkCollectionItemCell = cell as? ArtworkCollectionItemCell else {
+            return
+        }
+        
+        let artworkItemViewModel = artworkItems[indexPath.row]
+        artworkItemViewModel.onStateUpdate = { state in
+            guard let visibleArtworkCollectionItemCell = collectionView.cellForItem(at: indexPath) as? ArtworkCollectionItemCell else {
+                return
+            }
+            
+            visibleArtworkCollectionItemCell.show(state: state)
+        }
+        
+        artworkCollectionItemCell.show(state: artworkItemViewModel.state)
+        artworkItemViewModel.loadIfNeeded()
     }
     
     // MARK: - UIScrollViewDelegate

@@ -8,9 +8,42 @@
 import Foundation
 
 final class ArtworkCollectionItemCellModel: ArtworkCollectionItemCellModeling {
-    let artworkId: URL
+    private(set) var state: ArtworkItemDataLoaderState = .idle {
+        didSet {
+            onStateUpdate?(state)
+        }
+    }
     
-    init(artworkId: URL) {
+    var onStateUpdate: StateUpdateHandler?
+    
+    private let artworkId: URL
+    private let artworkItemLoader: ArtworkItemDataLoading
+    
+    init(artworkId: URL, artworkItemLoader: ArtworkItemDataLoading) {
         self.artworkId = artworkId
+        self.artworkItemLoader = artworkItemLoader
+    }
+    
+    // MARK: - ArtworkCollectionItemCellModeling
+    
+    @MainActor
+    func loadIfNeeded() {
+        guard case .idle = state else {
+            return
+        }
+        
+        load()
+    }
+    
+    private func load() {
+        artworkItemLoader.onStateUpdate = { [weak self] state in
+            guard let self = self else {
+                return
+            }
+            
+            self.state = state
+        }
+        
+        artworkItemLoader.loadArtworkItem(artworkId: artworkId)
     }
 }

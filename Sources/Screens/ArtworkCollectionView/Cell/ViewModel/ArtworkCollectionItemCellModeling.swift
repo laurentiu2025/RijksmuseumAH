@@ -7,7 +7,9 @@
 
 import Foundation
 
-protocol ArtworkCollectionItemCellModeling {
-    // TODO: To be implemented
-    var artworkId: URL { get }
+protocol ArtworkCollectionItemCellModeling: AnyObject {
+    var state: ArtworkItemDataLoaderState { get }
+    typealias StateUpdateHandler = (ArtworkItemDataLoaderState) -> Void
+    var onStateUpdate: StateUpdateHandler? { get set }
+    func loadIfNeeded()
 }
