@@ -101,6 +101,9 @@
 		0911CC7C2E7C2FF7007AC615 /* ArtworkViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC7B2E7C2FF7007AC615 /* ArtworkViewModelFactory.swift */; };
 		0911CC7F2E7C3013007AC615 /* ArtworkViewImageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC7E2E7C3013007AC615 /* ArtworkViewImageState.swift */; };
 		0911CC822E7C3075007AC615 /* ArtworkPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC812E7C3075007AC615 /* ArtworkPreviewViewModel.swift */; };
+		0911CC862E7C3FE7007AC615 /* ArtworkViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC852E7C3FE7007AC615 /* ArtworkViewModelTests.swift */; };
+		0911CC8B2E7C4086007AC615 /* ArtworkImageLoaderSuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC8A2E7C4086007AC615 /* ArtworkImageLoaderSuccessMock.swift */; };
+		0911CC8D2E7C408F007AC615 /* ArtworkImageLoaderFailureMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911CC8C2E7C408F007AC615 /* ArtworkImageLoaderFailureMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +221,9 @@
 		0911CC7B2E7C2FF7007AC615 /* ArtworkViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViewModelFactory.swift; sourceTree = "<group>"; };
 		0911CC7E2E7C3013007AC615 /* ArtworkViewImageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViewImageState.swift; sourceTree = "<group>"; };
 		0911CC812E7C3075007AC615 /* ArtworkPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkPreviewViewModel.swift; sourceTree = "<group>"; };
+		0911CC852E7C3FE7007AC615 /* ArtworkViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViewModelTests.swift; sourceTree = "<group>"; };
+		0911CC8A2E7C4086007AC615 /* ArtworkImageLoaderSuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkImageLoaderSuccessMock.swift; sourceTree = "<group>"; };
+		0911CC8C2E7C408F007AC615 /* ArtworkImageLoaderFailureMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkImageLoaderFailureMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +294,7 @@
 		0911CAF52E7AA40C007AC615 /* RijksmuseumAHTests */ = {
 			isa = PBXGroup;
 			children = (
+				0911CC832E7C3FD4007AC615 /* Screens */,
 				0911CBC42E7AD88D007AC615 /* Services */,
 				0911CBB92E7AD4A1007AC615 /* Common */,
 			);
@@ -700,6 +707,32 @@
 			path = Preview;
 			sourceTree = "<group>";
 		};
+		0911CC832E7C3FD4007AC615 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0911CC842E7C3FDC007AC615 /* ArtworkView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0911CC842E7C3FDC007AC615 /* ArtworkView */ = {
+			isa = PBXGroup;
+			children = (
+				0911CC852E7C3FE7007AC615 /* ArtworkViewModelTests.swift */,
+				0911CC872E7C4054007AC615 /* Mocks */,
+			);
+			path = ArtworkView;
+			sourceTree = "<group>";
+		};
+		0911CC872E7C4054007AC615 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0911CC8A2E7C4086007AC615 /* ArtworkImageLoaderSuccessMock.swift */,
+				0911CC8C2E7C408F007AC615 /* ArtworkImageLoaderFailureMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -926,7 +959,10 @@
 				0911CBBF2E7AD4A1007AC615 /* NetworkServiceURLProtocol.swift in Sources */,
 				0911CBC62E7AD896007AC615 /* ArtworkDetailsServiceTests.swift in Sources */,
 				0911CBC12E7AD4A1007AC615 /* NetworkServiceTargetURLBehaviour.swift in Sources */,
+				0911CC8D2E7C408F007AC615 /* ArtworkImageLoaderFailureMock.swift in Sources */,
+				0911CC8B2E7C4086007AC615 /* ArtworkImageLoaderSuccessMock.swift in Sources */,
 				0911CBC82E7AD8A8007AC615 /* ArtworkCollectionServiceTests.swift in Sources */,
+				0911CC862E7C3FE7007AC615 /* ArtworkViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
