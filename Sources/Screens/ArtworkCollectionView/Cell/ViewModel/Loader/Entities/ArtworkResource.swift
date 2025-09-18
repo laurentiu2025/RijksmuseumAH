@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ArtworkResource {
+struct ArtworkResource: Hashable {
     let title: String
     let imageID: String
 }

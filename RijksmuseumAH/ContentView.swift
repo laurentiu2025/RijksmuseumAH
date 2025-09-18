@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedArtworkResource: ArtworkResource?
+    
     var body: some View {
-        ArtworkCollectionViewWrapper { artworkResource in
-            print(artworkResource)
+        NavigationStack {
+            ArtworkCollectionViewWrapper { artworkResource in
+                selectedArtworkResource = artworkResource
+            }
+            .navigationTitle("Artworks")
+            .navigationDestination(item: $selectedArtworkResource) { artworkResource in
+                ArtworkViewFactory.makeView(artworkResource: artworkResource)
+                    .navigationTitle(artworkResource.title)
+            }
         }
     }
 }

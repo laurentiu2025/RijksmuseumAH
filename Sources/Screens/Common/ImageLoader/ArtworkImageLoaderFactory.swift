@@ -13,4 +13,10 @@ final class ArtworkImageLoaderFactory {
         let imageDownloader = IIIFImageDownloaderFactory.makeDownloader()
         return ArtworkImageLoader(info: info, imageDownloader: imageDownloader)
     }
+    
+    static func makeDetailLoader() -> ArtworkImageLoader {
+        let info = IIIFImageInfo(region: .full, size: .max, rotation: 0, quality: .standard, format: .png)
+        let imageDownloader = IIIFImageDownloaderFactory.makeDownloader()
+        return ArtworkImageLoader(info: info, imageDownloader: imageDownloader)
+    }
 }
