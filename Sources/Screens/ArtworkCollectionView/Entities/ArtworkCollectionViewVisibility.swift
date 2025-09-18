@@ -9,7 +9,7 @@ import Foundation
 
 struct ArtworkCollectionViewVisibility {
     let isCollectionViewHidden: Bool
-    let items: [ArtworkCollectionItemCellModel]
+    let items: [ArtworkCollectionItemCellModeling]
     let isLoadingIndicatorHidden: Bool
     let isEmptyLabelHidden: Bool
     let isErrorViewHidden: Bool

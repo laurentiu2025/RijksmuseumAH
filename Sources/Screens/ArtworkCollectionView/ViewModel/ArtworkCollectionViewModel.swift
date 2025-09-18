@@ -63,7 +63,7 @@ final class ArtworkCollectionViewModel: ArtworkCollectionViewModeling {
     }
     
     @MainActor
-    private func fetchMoreArtworkItemsUseCase(existingArtworkItemViewModels: [ArtworkCollectionItemCellModel], next: ArtworkNextCollection) {
+    private func fetchMoreArtworkItemsUseCase(existingArtworkItemViewModels: [ArtworkCollectionItemCellModeling], next: ArtworkNextCollection) {
         Task {
             state = .loadingMore(items: existingArtworkItemViewModels, next: next)
             do {

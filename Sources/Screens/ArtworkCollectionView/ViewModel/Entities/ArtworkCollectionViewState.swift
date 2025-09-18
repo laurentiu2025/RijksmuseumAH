@@ -11,7 +11,7 @@ enum ArtworkCollectionViewState {
     case idle
     case loadingInitial
     case initialLoadFailed(Error)
-    case loaded(items: [ArtworkCollectionItemCellModel], next: ArtworkNextCollection)
-    case loadingMore(items: [ArtworkCollectionItemCellModel], next: ArtworkNextCollection)
-    case loadMoreFailed(items: [ArtworkCollectionItemCellModel], next: ArtworkNextCollection, error: Error)
+    case loaded(items: [ArtworkCollectionItemCellModeling], next: ArtworkNextCollection)
+    case loadingMore(items: [ArtworkCollectionItemCellModeling], next: ArtworkNextCollection)
+    case loadMoreFailed(items: [ArtworkCollectionItemCellModeling], next: ArtworkNextCollection, error: Error)
 }
