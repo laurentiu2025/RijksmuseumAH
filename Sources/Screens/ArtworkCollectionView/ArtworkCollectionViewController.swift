@@ -206,6 +206,7 @@ final class ArtworkCollectionViewController: UIViewController {
         collectionViewDataSource.artworkItems = visibility.items
         collectionViewDelegate.artworkItems = visibility.items
         collectionView.reloadData()
+        visibility.isLoadingIndicatorHidden ? loadingIndicatorView.stopAnimating() : loadingIndicatorView.startAnimating()
         loadingIndicatorView.isHidden = visibility.isLoadingIndicatorHidden
         emptyLabel.isHidden = visibility.isEmptyLabelHidden
         errorView.isHidden = visibility.isErrorViewHidden
