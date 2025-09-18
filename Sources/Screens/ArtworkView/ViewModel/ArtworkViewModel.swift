@@ -28,7 +28,7 @@ final class ArtworkViewModel: ArtworkViewModeling {
     func fetchArtworkImageData() async {
         imageState = .loading
         do {
-            let imageData = try await imageDownloader.loadImage(imageId: artworkResource.imageID)
+            let imageData = try await imageDownloader.loadImage(imageID: artworkResource.imageID)
             imageState = .loaded(.success(imageData))
         } catch {
             imageState = .loaded(.failure(error))

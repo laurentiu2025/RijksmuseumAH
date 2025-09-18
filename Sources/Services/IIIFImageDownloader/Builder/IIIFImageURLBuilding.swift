@@ -8,5 +8,5 @@
 import Foundation
 
 protocol IIIFImageURLBuilding {
-    func buildURL(imageId: String, info: IIIFImageInfo) -> URL
+    func buildURL(imageID: String, info: IIIFImageInfo) -> URL
 }

@@ -81,7 +81,7 @@ final class ArtworkCollectionViewModel: ArtworkCollectionViewModeling {
     
     private func artworkItemViewModels(artworkItems: [ArtworkItem]) -> [ArtworkCollectionItemCellModel] {
         return artworkItems.map {
-            ArtworkCollectionItemCellModelFactory.makeModel(artworkId: $0.id)
+            ArtworkCollectionItemCellModelFactory.makeModel(artworkID: $0.id)
         }
     }
 }

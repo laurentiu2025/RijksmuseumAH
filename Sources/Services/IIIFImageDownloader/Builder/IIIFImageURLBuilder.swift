@@ -14,8 +14,8 @@ final class DefaultIIIFImageURLBuilder: IIIFImageURLBuilding {
     
     // MARK: - IIIFImageURLBuilding
     
-    func buildURL(imageId: String, info: IIIFImageInfo) -> URL {
-        let imageURL = API.base.appendingPathComponent(imageId)
+    func buildURL(imageID: String, info: IIIFImageInfo) -> URL {
+        let imageURL = API.base.appendingPathComponent(imageID)
         let regionURL = imageURL.appendingPathComponent(info.region.rawValue)
         let sizeURL = regionURL.appendingPathComponent(info.size.rawValue)
         let rotationURL = sizeURL.appendingPathComponent(String(info.rotation))

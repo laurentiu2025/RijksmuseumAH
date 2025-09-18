@@ -16,11 +16,11 @@ final class ArtworkCollectionItemCellModel: ArtworkCollectionItemCellModeling {
     
     var onStateUpdate: StateUpdateHandler?
     
-    private let artworkId: URL
+    private let artworkID: URL
     private let artworkItemLoader: ArtworkItemDataLoading
     
-    init(artworkId: URL, artworkItemLoader: ArtworkItemDataLoading) {
-        self.artworkId = artworkId
+    init(artworkID: URL, artworkItemLoader: ArtworkItemDataLoading) {
+        self.artworkID = artworkID
         self.artworkItemLoader = artworkItemLoader
     }
     
@@ -44,6 +44,6 @@ final class ArtworkCollectionItemCellModel: ArtworkCollectionItemCellModeling {
             self.state = state
         }
         
-        artworkItemLoader.loadArtworkItem(artworkId: artworkId)
+        artworkItemLoader.loadArtworkItem(artworkID: artworkID)
     }
 }

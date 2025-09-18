@@ -8,8 +8,8 @@
 import Foundation
 
 final class ArtworkCollectionItemCellModelFactory {
-    static func makeModel(artworkId: URL) -> ArtworkCollectionItemCellModel {
+    static func makeModel(artworkID: URL) -> ArtworkCollectionItemCellModel {
         let artworkItemLoader = ArtworkItemDataLoaderFactory.makeLoader()
-        return ArtworkCollectionItemCellModel(artworkId: artworkId, artworkItemLoader: artworkItemLoader)
+        return ArtworkCollectionItemCellModel(artworkID: artworkID, artworkItemLoader: artworkItemLoader)
     }
 }

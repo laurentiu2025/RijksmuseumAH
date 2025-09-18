@@ -10,5 +10,5 @@ import Foundation
 protocol ArtworkItemDataLoading: AnyObject {
     typealias StateUpdateHandler = (ArtworkItemDataLoaderState) -> Void
     var onStateUpdate: StateUpdateHandler? { get set }
-    func loadArtworkItem(artworkId: URL)
+    func loadArtworkItem(artworkID: URL)
 }

@@ -16,13 +16,13 @@ final class ArtworkDetailsServiceTests: XCTestCase {
     
     func test_fetchArtworkDetails_whenResponseIsValid_returnsArtworkDetails() async throws  {
         // Given
-        let artworkId = URL(string: "https://www.google.com")!
-        try configureValidResponse(url: artworkId)
+        let artworkID = URL(string: "https://www.google.com")!
+        try configureValidResponse(url: artworkID)
         let sut = artworkDetailsService()
         
         do {
             // When
-            let artworkDetails = try await sut.fetchArtworkDetails(id: artworkId)
+            let artworkDetails = try await sut.fetchArtworkDetails(id: artworkID)
             
             // Then
             if let artworkIdentifier = artworkDetails.identifiedBy.first {
@@ -33,8 +33,8 @@ final class ArtworkDetailsServiceTests: XCTestCase {
             }
             
             if let artworkShow = artworkDetails.shows.first {
-                let expectedArtworkShowId = URL(string: "https://id.rijksmuseum.nl/202322138")!
-                XCTAssertEqual(artworkShow.id, expectedArtworkShowId)
+                let expectedArtworkShowID = URL(string: "https://id.rijksmuseum.nl/202322138")!
+                XCTAssertEqual(artworkShow.id, expectedArtworkShowID)
                 XCTAssertEqual(artworkShow.type, .visualItem)
             } else {
                 XCTFail("Missing artwork show")
@@ -46,13 +46,13 @@ final class ArtworkDetailsServiceTests: XCTestCase {
     
     func test_fetchArtworkDetails_whenResponseIsInvalid_throwsError() async throws  {
         // Given
-        let artworkId = URL(string: "https://www.google.com")!
-        try configureInvalidResponse(url: artworkId)
+        let artworkID = URL(string: "https://www.google.com")!
+        try configureInvalidResponse(url: artworkID)
         let sut = artworkDetailsService()
         
         do {
             // When
-            _ = try await sut.fetchArtworkDetails(id: artworkId)
+            _ = try await sut.fetchArtworkDetails(id: artworkID)
             XCTFail("Expected error to be thrown, but succeeded instead")
         } catch {
             // Then

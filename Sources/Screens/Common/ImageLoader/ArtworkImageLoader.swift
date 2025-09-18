@@ -18,7 +18,7 @@ class ArtworkImageLoader: ArtworkImageLoading {
     
     // MARK: - ArtworkImageLoading
     
-    func loadImage(imageId: String) async throws -> Data {
-        return try await imageDownloader.downloadImage(id: imageId, with: info)
+    func loadImage(imageID: String) async throws -> Data {
+        return try await imageDownloader.downloadImage(id: imageID, with: info)
     }
 }

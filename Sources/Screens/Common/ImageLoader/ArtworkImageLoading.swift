@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ArtworkImageLoading {
-    func loadImage(imageId: String) async throws -> Data
+    func loadImage(imageID: String) async throws -> Data
 }

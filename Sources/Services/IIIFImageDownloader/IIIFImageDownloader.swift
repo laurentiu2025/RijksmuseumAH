@@ -19,7 +19,7 @@ final class IIIFImageDownloader: IIIFImageDownloading {
     // MARK: - IIIFImageDownloading
     
     func downloadImage(id: String, with info: IIIFImageInfo) async throws -> Data {
-        let imageURL = urlBuilder.buildURL(imageId: id, info: info)
+        let imageURL = urlBuilder.buildURL(imageID: id, info: info)
         return try await imageDownloader.downloadImage(url: imageURL)
     }
 }

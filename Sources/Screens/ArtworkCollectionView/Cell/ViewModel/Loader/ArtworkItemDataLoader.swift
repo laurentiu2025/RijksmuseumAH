@@ -31,13 +31,13 @@ class ArtworkItemDataLoader: ArtworkItemDataLoading {
     // MARK: - ArtworkItemDataLoading
     
     @MainActor
-    func loadArtworkItem(artworkId: URL) {
+    func loadArtworkItem(artworkID: URL) {
         Task { [weak self] in
             guard let self = self else {
                 return
             }
             
-            guard let artworkReference = await loadArtworkReference(artworkId: artworkId) else {
+            guard let artworkReference = await loadArtworkReference(artworkID: artworkID) else {
                 return
             }
             
@@ -52,10 +52,10 @@ class ArtworkItemDataLoader: ArtworkItemDataLoading {
     // MARK: - Reference
     
     @MainActor
-    private func loadArtworkReference(artworkId: URL) async -> ArtworkReference? {
+    private func loadArtworkReference(artworkID: URL) async -> ArtworkReference? {
         do {
             state = .loadingReference
-            let artworkReference = try await fetchArtworkReference(artworkId: artworkId)
+            let artworkReference = try await fetchArtworkReference(artworkID: artworkID)
             state = .referenceLoaded(reference: artworkReference)
             return artworkReference
         } catch {
@@ -65,8 +65,8 @@ class ArtworkItemDataLoader: ArtworkItemDataLoading {
         }
     }
     
-    private func fetchArtworkReference(artworkId: URL) async throws -> ArtworkReference {
-        let artworkDetails = try await artworkDetailsService.fetchArtworkDetails(id: artworkId)
+    private func fetchArtworkReference(artworkID: URL) async throws -> ArtworkReference {
+        let artworkDetails = try await artworkDetailsService.fetchArtworkDetails(id: artworkID)
         
         guard let title = artworkDetails.identifiedBy.first(where: { $0.type == .name }),
               let artworkShow = artworkDetails.shows.first(where: { $0.type == .visualItem }) else {
@@ -82,9 +82,9 @@ class ArtworkItemDataLoader: ArtworkItemDataLoading {
     private func loadArtworkResource(artworkReference: ArtworkReference) async -> ArtworkResource? {
         state = .loadingResource(reference: artworkReference)
         do {
-            let artworkImageResourceId = try await fetchArtworkImageResourceId(showId: artworkReference.imageURL)
-            let imageId = try await fetchArtworkImageId(id: artworkImageResourceId)
-            return ArtworkResource(title: artworkReference.title, imageID: imageId)
+            let artworkImageResourceID = try await fetchArtworkImageResourceID(showID: artworkReference.imageURL)
+            let imageID = try await fetchArtworkImageID(id: artworkImageResourceID)
+            return ArtworkResource(title: artworkReference.title, imageID: imageID)
         } catch {
             let detailedError = ArtworkItemDataLoaderStateError.loadResourceFailed(reference: artworkReference, error: error)
             state = .failed(detailedError)
@@ -92,8 +92,8 @@ class ArtworkItemDataLoader: ArtworkItemDataLoading {
         }
     }
     
-    private func fetchArtworkImageResourceId(showId: URL) async throws -> URL {
-        let showDetails = try await showDetailsService.fetchShowDetails(id: showId)
+    private func fetchArtworkImageResourceID(showID: URL) async throws -> URL {
+        let showDetails = try await showDetailsService.fetchShowDetails(id: showID)
         
         guard let digitalItemIdentifier = showDetails.digitallyShownBy.first(where: { $0.type == .digitalObject }) else {
             throw ArtworkItemDataLoaderError.missingRequiredData
@@ -102,15 +102,15 @@ class ArtworkItemDataLoader: ArtworkItemDataLoading {
         return digitalItemIdentifier.id
     }
     
-    private func fetchArtworkImageId(id: URL) async throws -> String {
+    private func fetchArtworkImageID(id: URL) async throws -> String {
         let digitalItem = try await digitalItemService.fetchDigitalItem(id: id)
         
         guard let digitalAccessPoint = digitalItem.accessPoint.first(where: { $0.type == .digitalObject }),
-              let imageId = digitalAccessPoint.id.pathComponents.dropFirst().first else {
+              let imageID = digitalAccessPoint.id.pathComponents.dropFirst().first else {
             throw ArtworkItemDataLoaderError.missingRequiredData
         }
         
-        return imageId
+        return imageID
     }
     
     // MARK: - Image
@@ -119,7 +119,7 @@ class ArtworkItemDataLoader: ArtworkItemDataLoading {
     private func loadImage(artworkResource: ArtworkResource) async {
         state = .loadingImage(artworkResource: artworkResource)
         do {
-            let artworkImageData = try await imageLoader.loadImage(imageId: artworkResource.imageID)
+            let artworkImageData = try await imageLoader.loadImage(imageID: artworkResource.imageID)
             let imageResult = ArtworkItemDataLoaderState.ImageLoadResult.success(artworkImageData)
             state = .loaded(artworkResource: artworkResource, imageResult: imageResult)
         } catch {
