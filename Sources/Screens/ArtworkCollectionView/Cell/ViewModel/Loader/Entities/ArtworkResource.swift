@@ -1,5 +1,5 @@
 //
-//  ArtworkViewData.swift
+//  ArtworkResource.swift
 //  RijksmuseumAH
 //
 //  Created by Laurentiu Cociu on 9/18/25.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ArtworkViewData {
+struct ArtworkResource {
     let title: String
-    let imageId: String
+    let imageID: String
 }

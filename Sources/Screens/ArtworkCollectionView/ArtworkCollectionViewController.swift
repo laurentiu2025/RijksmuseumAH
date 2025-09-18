@@ -57,7 +57,7 @@ final class ArtworkCollectionViewController: UIViewController {
     private let collectionViewDataSource: ArtworkCollectionViewDataSource
     private var viewModel: ArtworkCollectionViewModeling
     
-    typealias ArtworkSelectionHandler = (ArtworkViewData) -> Void
+    typealias ArtworkSelectionHandler = (ArtworkResource) -> Void
     var onArtworkSelected: ArtworkSelectionHandler?
     
     // MARK: - Initialization
@@ -124,11 +124,11 @@ final class ArtworkCollectionViewController: UIViewController {
             }
             
             let selectedArtworkItem = collectionViewDataSource.artworkItems[indexPath.row]
-            guard case .loaded(let artworkData, _) = selectedArtworkItem.state else {
+            guard case .loaded(let artworkResource, _) = selectedArtworkItem.state else {
                 return
             }
             
-            onArtworkSelected?(artworkData)
+            onArtworkSelected?(artworkResource)
         }
         
         collectionViewDelegate.onScrolledToBottom = { [weak self] in

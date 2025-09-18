@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ArtworkCollectionViewWrapper { artworkData in
-            print(artworkData)
+        ArtworkCollectionViewWrapper { artworkResource in
+            print(artworkResource)
         }
     }
 }

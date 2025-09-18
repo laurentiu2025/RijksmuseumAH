@@ -19,21 +19,14 @@ final class ArtworkCollectionItemCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var artworkImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+    private lazy var artworkImageView: ArtworkCollectionItemCellImageView = {
+        let imageView = ArtworkCollectionItemCellImageView()
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
         return imageView
     }()
     
-    private lazy var artworkLoadingIndicatorView = {
-        let indicatorView = UIActivityIndicatorView(style: .medium)
-        indicatorView.isHidden = true
-        return indicatorView
-    }()
-    
-    private lazy var imageLoadingIndicatorView = {
+    private lazy var loadingIndicatorView = {
         let indicatorView = UIActivityIndicatorView(style: .medium)
         indicatorView.isHidden = true
         return indicatorView
@@ -82,13 +75,12 @@ final class ArtworkCollectionItemCell: UICollectionViewCell {
         super.prepareForReuse()
         
         let visibility = ArtworkCollectionItemCellVisibility(title: nil,
-                                                             image: nil,
                                                              isStackViewHidden: true,
-                                                             isArtworkLoadingIndicatorHidden: true,
+                                                             isLoadingIndicatorHidden: true,
                                                              artworkImageViewBackgroundColor: .clear,
-                                                             isImageLoadingIndicatorHidden: true,
-                                                             isErrorTitleHidden: true,
-                                                             errorTitle: nil)
+                                                             artworkImageViewState: .idle,
+                                                             errorTitle: nil,
+                                                             isErrorTitleHidden: true)
         setVisibility(visibility)
     }
     
@@ -98,8 +90,7 @@ final class ArtworkCollectionItemCell: UICollectionViewCell {
         setupStackViewLayout()
         setupTitleLabelLayout()
         setupArtworkImageViewLayout()
-        setupArtworkLoadingIndicatorViewLayout()
-        setupImageLoadingIndicatorViewLayout()
+        setupLoadingIndicatorViewLayout()
         setupErrorLabelLayout()
     }
     
@@ -129,23 +120,13 @@ final class ArtworkCollectionItemCell: UICollectionViewCell {
         stackView.addArrangedSubview(artworkImageView)
     }
     
-    private func setupArtworkLoadingIndicatorViewLayout() {
-        artworkLoadingIndicatorView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(artworkLoadingIndicatorView)
+    private func setupLoadingIndicatorViewLayout() {
+        loadingIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(loadingIndicatorView)
         
         NSLayoutConstraint.activate([
-            artworkLoadingIndicatorView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 0),
-            artworkLoadingIndicatorView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 0),
-        ])
-    }
-    
-    private func setupImageLoadingIndicatorViewLayout() {
-        imageLoadingIndicatorView.translatesAutoresizingMaskIntoConstraints = false
-        artworkImageView.addSubview(imageLoadingIndicatorView)
-        
-        NSLayoutConstraint.activate([
-            imageLoadingIndicatorView.centerXAnchor.constraint(equalTo: artworkImageView.centerXAnchor, constant: 0),
-            imageLoadingIndicatorView.centerYAnchor.constraint(equalTo: artworkImageView.centerYAnchor, constant: 0),
+            loadingIndicatorView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 0),
+            loadingIndicatorView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 0),
         ])
     }
     
@@ -170,14 +151,12 @@ final class ArtworkCollectionItemCell: UICollectionViewCell {
     
     private func setVisibility(_ visibility: ArtworkCollectionItemCellVisibility) {
         titleLabel.text = visibility.title
-        artworkImageView.image = visibility.image
         stackView.isHidden = visibility.isStackViewHidden
-        artworkLoadingIndicatorView.isHidden = visibility.isArtworkLoadingIndicatorHidden
-        visibility.isArtworkLoadingIndicatorHidden ? artworkLoadingIndicatorView.stopAnimating() : artworkLoadingIndicatorView.startAnimating()
+        loadingIndicatorView.isHidden = visibility.isLoadingIndicatorHidden
+        visibility.isLoadingIndicatorHidden ? loadingIndicatorView.stopAnimating() : loadingIndicatorView.startAnimating()
         artworkImageView.backgroundColor = visibility.artworkImageViewBackgroundColor
-        imageLoadingIndicatorView.isHidden = visibility.isImageLoadingIndicatorHidden
-        visibility.isImageLoadingIndicatorHidden ? imageLoadingIndicatorView.stopAnimating() : imageLoadingIndicatorView.startAnimating()
-        errorLabel.isHidden = visibility.isErrorTitleHidden
+        artworkImageView.show(state: visibility.artworkImageViewState)
         errorLabel.text = visibility.errorTitle
+        errorLabel.isHidden = visibility.isErrorTitleHidden
     }
 }

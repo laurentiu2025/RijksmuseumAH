@@ -9,11 +9,12 @@ import Foundation
 
 enum ArtworkItemDataLoaderState {
     case idle
-    case loadingTitle
-    case titleLoaded(title: String)
-    case loadingContent(title: String)
-    case contentLoaded(artworkData: ArtworkViewData)
-    case loadingImage(artworkData: ArtworkViewData)
-    case loaded(artworkData: ArtworkViewData, imageData: Data)
-    case failed(Error)
+    case loadingReference
+    case referenceLoaded(reference: ArtworkReference)
+    case loadingResource(reference: ArtworkReference)
+    case resourceLoaded(resource: ArtworkResource)
+    case loadingImage(artworkResource: ArtworkResource)
+    typealias ImageLoadResult = Result<Data, Error>
+    case loaded(artworkResource: ArtworkResource, imageResult: ImageLoadResult)
+    case failed(ArtworkItemDataLoaderStateError)
 }

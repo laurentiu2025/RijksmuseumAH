@@ -9,11 +9,10 @@ import UIKit
 
 struct ArtworkCollectionItemCellVisibility {
     let title: String?
-    let image: UIImage?
     let isStackViewHidden: Bool
-    let isArtworkLoadingIndicatorHidden: Bool
+    let isLoadingIndicatorHidden: Bool
     let artworkImageViewBackgroundColor: UIColor
-    let isImageLoadingIndicatorHidden: Bool
-    let isErrorTitleHidden: Bool
+    let artworkImageViewState: ArtworkCollectionItemCellImageViewState
     let errorTitle: String?
+    let isErrorTitleHidden: Bool
 }
