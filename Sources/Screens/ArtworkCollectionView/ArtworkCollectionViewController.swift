@@ -89,8 +89,8 @@ final class ArtworkCollectionViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         let padding: CGFloat = 16
-        let interItemSpacing: CGFloat = collectionViewLayout.minimumInteritemSpacing
-        let totalSpacing = interItemSpacing + padding
+        let interitemSpacing: CGFloat = collectionViewLayout.minimumInteritemSpacing
+        let totalSpacing = interitemSpacing + padding
         
         let numberOfItemsPerRow: CGFloat = 2
         let availableWidth = collectionView.bounds.width - totalSpacing
