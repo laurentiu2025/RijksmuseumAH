@@ -81,14 +81,15 @@ final class ArtworkCollectionItemCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        let viewState = ArtworkCollectionItemCellState(title: nil,
-                                                       image: nil,
-                                                       isStackViewHidden: true,
-                                                       isArtworkLoadingIndicatorHidden: true,
-                                                       isImageBackgroundHidden: true,
-                                                       isImageLoadingIndicatorHidden: true,
-                                                       errorTitle: nil)
-        setViewState(viewState)
+        let visibility = ArtworkCollectionItemCellVisibility(title: nil,
+                                                             image: nil,
+                                                             isStackViewHidden: true,
+                                                             isArtworkLoadingIndicatorHidden: true,
+                                                             artworkImageViewBackgroundColor: .clear,
+                                                             isImageLoadingIndicatorHidden: true,
+                                                             isErrorTitleHidden: true,
+                                                             errorTitle: nil)
+        setVisibility(visibility)
     }
     
     // MARK: - Layout
@@ -163,21 +164,20 @@ final class ArtworkCollectionItemCell: UICollectionViewCell {
     // MARK: - State
     
     func show(state: ArtworkItemDataLoaderState) {
-        let viewState = ArtworkCollectionItemCellStateMapper.mapState(loaderState: state)
-        setViewState(viewState)
+        let visibility = ArtworkCollectionItemCellVisibilityMapper.mapVisibility(loaderState: state)
+        setVisibility(visibility)
     }
     
-    private func setViewState(_ state: ArtworkCollectionItemCellState) {
-        titleLabel.text = state.title
-        artworkImageView.image = state.image
-        stackView.isHidden = state.isStackViewHidden
-        artworkLoadingIndicatorView.isHidden = state.isArtworkLoadingIndicatorHidden
-        state.isArtworkLoadingIndicatorHidden ? artworkLoadingIndicatorView.stopAnimating() : artworkLoadingIndicatorView.startAnimating()
-        let artworkImageViewBackground: UIColor = state.isImageBackgroundHidden ? .clear : .gray
-        artworkImageView.backgroundColor = artworkImageViewBackground
-        imageLoadingIndicatorView.isHidden = state.isImageLoadingIndicatorHidden
-        state.isImageLoadingIndicatorHidden ? imageLoadingIndicatorView.stopAnimating() : imageLoadingIndicatorView.startAnimating()
-        errorLabel.isHidden = state.errorTitle == nil
-        errorLabel.text = state.errorTitle
+    private func setVisibility(_ visibility: ArtworkCollectionItemCellVisibility) {
+        titleLabel.text = visibility.title
+        artworkImageView.image = visibility.image
+        stackView.isHidden = visibility.isStackViewHidden
+        artworkLoadingIndicatorView.isHidden = visibility.isArtworkLoadingIndicatorHidden
+        visibility.isArtworkLoadingIndicatorHidden ? artworkLoadingIndicatorView.stopAnimating() : artworkLoadingIndicatorView.startAnimating()
+        artworkImageView.backgroundColor = visibility.artworkImageViewBackgroundColor
+        imageLoadingIndicatorView.isHidden = visibility.isImageLoadingIndicatorHidden
+        visibility.isImageLoadingIndicatorHidden ? imageLoadingIndicatorView.stopAnimating() : imageLoadingIndicatorView.startAnimating()
+        errorLabel.isHidden = visibility.isErrorTitleHidden
+        errorLabel.text = visibility.errorTitle
     }
 }
